@@ -1,0 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.left{
+    width: 25vw;
+    margin: 10px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home{
+    background-color: rgb(26, 26, 26);
+    border-radius: 7px;
+    padding: 3px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 22px;
+    color: white;
+}
+
+.home li{
+    width: 34px;
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    font-weight: 500;
+    padding:15px 18px ;
+    
+}
+.home li img{
+    z-index: 999;
+    fill: white; 
+    width: 30px; 
+    height: 30px; 
+}
+.logo img{
+    height: 40px;
+    padding: 10px 10px 0px 0px;
+}
+.library{
+    background-color: rgb(26, 26, 26);
+    border-radius: 7px;
+    padding: 3px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+    color: white;
+    min-height: 70vh;
+    position: relative;
+}
+.lib {
+    display: flex;
+    flex-direction: row;
+    gap: 130px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lib .head{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 15px 10px 15px;
+}
+ .lib .head img {
+    z-index: 999;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
+    width: 25px;
+    height: 30px;
+}
+.lib .add{
+    padding-left: 20px;
+}
+.lib .add svg{
+    height: 25px;
+    
+}
+.footer {
+   
+    padding: 20px 40px;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   position: absolute;
+   bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    border-radius: 7px;
+    padding: 3px;
+    margin: 18px 0px;
+    width: 75vw;
+    margin-right: 15px;
+    
+}
+.right .header {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+   margin: -4px;
+    background-color: #111010;
+    align-items: center;
+}
+.header .nav {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+.header .nav svg{
+    border-radius: 50px;
+    background-color: #020202;
+    padding: 3px;
+}
+ .button{
+    display: flex;
+    
+    flex-direction: row;
+    
+}
+.button button{
+    margin: 0 10px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s,transform 0.3s;
+}
+.button .log-in {
+    background-color: #ffff;
+    color: black;
+   
+}
+
+.button .sign-up {
+    background-color: transparent;
+    color: #b3b3b3;
+}
+
+.button .log-in:hover {
+    
+    color: black;
+    transform: scale(1.1);
+}
+
+.button .sign-up:hover {
+   
+    transform: scale(1.1);
+}
