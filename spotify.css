@@ -11,7 +11,7 @@ body{
 .container{
     display: flex;
     justify-content: center;
-    
+    gap: 10px;
     
 }
 .left{
@@ -21,6 +21,9 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .home{
@@ -64,8 +67,12 @@ body{
     align-items: flex-start;
     font-size: 15px;
     color: white;
-    min-height: 70vh;
+   
+    min-height: 70vh; /* Adjust this value as needed */
+    max-height: 80vh; /* Set a maximum height */
     position: relative;
+    height: 100%; /* Ensure it uses available height */
+    overflow: hidden; /* Hide overflow to manage scrolling within songlist */
 }
 .lib {
     display: flex;
@@ -105,7 +112,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
    position: absolute;
-   bottom: 0;
+   bottom: 60px;
 }
 
 .footer-links {
@@ -131,9 +138,11 @@ body{
     border-radius: 7px;
     padding: 3px;
     margin: 18px 0px;
-    width: 75vw;
+    width: 71vw;
     margin-right: 15px;
-    
+    position: absolute;
+    top: 0;
+    right: -5px;
 }
 .right .header {
    
@@ -177,6 +186,7 @@ body{
    
 }
 
+
 .button .sign-up {
     background-color: transparent;
     color: #b3b3b3;
@@ -192,3 +202,147 @@ body{
    
     transform: scale(1.1);
 }
+.popular{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+.pophead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pophead a{
+     text-decoration: none;
+     color: #b3b3b3;
+}
+.pophead a:hover{
+    text-decoration: underline;
+}
+.artists{
+    display: flex;
+    flex-direction: row;
+  
+}
+.artcard{
+    width: 285px;
+    height: 400px;
+    padding: 5px;
+    position: relative; 
+    transition: background-color 0.3s;
+    
+}
+.artcard img{
+    border-radius: 300px;
+    width: 270px;
+    height: 270px;
+    margin: 10px;
+}
+.artcard p{
+    color: #b3b3b3;
+}
+.play{
+    position: absolute;
+    top: 240px;
+    right: 40px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+.artcard:hover{
+    background-color: #232323;
+   
+}
+.artcard:hover .play {
+    opacity: 1;
+}
+
+.albumncard{
+    width: 280px;
+    height: 400px;
+    padding: 5px;
+    position: relative; 
+    transition: background-color 0.3s;
+    
+}
+.albumncard img{
+    border-radius: 5px;
+    width: 270px;
+    height: 270px;
+    margin: 10px;
+}
+.albumncard p{
+    color: #b3b3b3;
+}
+.play{
+    position: absolute;
+    top: 255px;
+    right: 38px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+.albumncard:hover{
+    background-color: #232323;
+   
+}
+.albumncard:hover .play {
+    opacity: 1;
+}
+.playbar{
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(3, 42, 3);
+    width: 72%;
+    padding: 12px;
+    height: 40px;
+    
+}
+
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.songlist{
+     flex: 1;
+    overflow-y: auto;
+    background-color: #121212;
+    width: 100%;
+    margin-bottom: 170px;
+    overflow-x: hidden; 
+
+}
+.songlist::-webkit-scrollbar {
+    width: 8px; 
+}
+
+
+.songlist::-webkit-scrollbar-track {
+    background: #121212; 
+}
+
+.songlist::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 4px; 
+}
+
+
+.songlist::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+.songlist ul{
+    padding: 0px 30px;
+   
+}
+
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 34px;
+    cursor: pointer;
+    padding: 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+ 
