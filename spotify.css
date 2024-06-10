@@ -3,6 +3,7 @@
 
 body{
     margin: 0;
+  
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: black;
@@ -22,8 +23,8 @@ body{
     flex-direction: column;
     gap: 10px;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -8px;
 }
 
 .home{
@@ -34,7 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 22px;
+    font-size: 18px;
     color: white;
 }
 
@@ -50,8 +51,8 @@ body{
 .home li img{
     z-index: 999;
     fill: white; 
-    width: 30px; 
-    height: 30px; 
+    width: 20px; 
+    height: 20px; 
 }
 .logo img{
     height: 40px;
@@ -68,16 +69,16 @@ body{
     font-size: 15px;
     color: white;
    
-    min-height: 70vh; /* Adjust this value as needed */
-    max-height: 80vh; /* Set a maximum height */
+    min-height: 70vh; 
+    max-height: 80vh; 
     position: relative;
-    height: 100%; /* Ensure it uses available height */
-    overflow: hidden; /* Hide overflow to manage scrolling within songlist */
+    height: 100%; 
+    overflow: hidden; 
 }
 .lib {
     display: flex;
     flex-direction: row;
-    gap: 130px;
+    gap: 20px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -92,14 +93,17 @@ body{
  .lib .head img {
     z-index: 999;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
-    width: 25px;
-    height: 30px;
+    width: 20px;
+    height: 25px;
+}
+.lib .head h3{
+    width: 124px;
 }
 .lib .add{
     padding-left: 20px;
 }
 .lib .add svg{
-    height: 25px;
+    height: 20px;
     
 }
 .footer {
@@ -112,7 +116,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
    position: absolute;
-   bottom: 60px;
+   bottom: 95px;
 }
 
 .footer-links {
@@ -141,7 +145,7 @@ body{
     width: 71vw;
     margin-right: 15px;
     position: absolute;
-    top: 0;
+    top: -10px;
     right: -5px;
 }
 .right .header {
@@ -225,17 +229,19 @@ body{
   
 }
 .artcard{
-    width: 285px;
-    height: 400px;
+    width: 225px;
+    height: 340px;
     padding: 5px;
     position: relative; 
     transition: background-color 0.3s;
     
 }
 .artcard img{
+    position: relative;
+    left: -9px;
     border-radius: 300px;
-    width: 270px;
-    height: 270px;
+    width: 220px;
+    height: 225px;
     margin: 10px;
 }
 .artcard p{
@@ -243,8 +249,8 @@ body{
 }
 .play{
     position: absolute;
-    top: 240px;
-    right: 40px;
+    top: 199px;
+    right: 23px;
     opacity: 0;
     transition: all 0.5s ease-out;
 }
@@ -254,11 +260,12 @@ body{
 }
 .artcard:hover .play {
     opacity: 1;
+    z-index: 9999;
 }
 
 .albumncard{
-    width: 280px;
-    height: 400px;
+    width: 225px;
+    height: 340px;
     padding: 5px;
     position: relative; 
     transition: background-color 0.3s;
@@ -266,8 +273,8 @@ body{
 }
 .albumncard img{
     border-radius: 5px;
-    width: 270px;
-    height: 270px;
+    width: 220px;
+    height: 220px;
     margin: 10px;
 }
 .albumncard p{
@@ -275,8 +282,8 @@ body{
 }
 .play{
     position: absolute;
-    top: 255px;
-    right: 38px;
+    top: 199px;
+    right: 23px;
     opacity: 0;
     transition: all 0.5s ease-out;
 }
@@ -290,25 +297,60 @@ body{
 .playbar{
     position: fixed;
     bottom: 0;
-    background-color: rgb(3, 42, 3);
+    background-color: #020202;
     width: 72%;
     padding: 12px;
     height: 40px;
+    border-radius: 40px;
     
 }
-
+.playtrack{
+    background-color: #555;
+    height: 6px;
+    width: 97%;
+    position: relative;
+    left: 15px;
+    top: -12px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.circle{
+    background-color: #ffffff;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    top: -5px;
+    left: 0%;
+    border-radius: 20px;
+    transition: left 1s;
+}
+.playelements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 .songbuttons{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    right: 379px;
     gap: 25px;
+}
+.songbuttons img{
+    cursor: pointer;
+}
+.songInfo{
+    color: #ffffff;
 }
 .songlist{
      flex: 1;
     overflow-y: auto;
     background-color: #121212;
     width: 100%;
-    margin-bottom: 170px;
+    margin-bottom: 235px;
     overflow-x: hidden; 
 
 }
@@ -345,4 +387,6 @@ body{
     align-items: center;
     align-content: center;
 }
- 
+@media screen and (max-width: 1400px) {
+   
+  }
