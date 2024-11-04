@@ -14,7 +14,7 @@ function sectomin(seconds){
 
 async function getsongs() {
    
-        let response = await fetch('http://127.0.0.1:5500/songs/');
+        let response = await fetch('http://127.0.0.1:5500/public/');
         
         // Check if the response is OK (status 200)
         if (!response.ok) {
@@ -34,7 +34,7 @@ async function getsongs() {
         for (let index = 0; index < as.length; index++) {
             const element = as[index];
             if (element.href.endsWith(".mp3")) {
-                songs.push(element.href.split("/songs/")[1]);
+                songs.push(element.href.split("/public/")[1]);
             }
         }
         
@@ -44,7 +44,7 @@ async function getsongs() {
 
 const playmusic=(track) =>{
    // let audio = new Audio("/songs/" + track)
-   currentsong.src= "/songs/" + track
+   currentsong.src= "/public/" + track
    currentsong.play()
     play.src ="pause.svg"
     document.querySelector(".songInfo").innerHTML=track
