@@ -46,7 +46,7 @@ const playmusic=(track) =>{
    // let audio = new Audio("/songs/" + track)
    currentsong.src= "/public/" + track
    currentsong.play()
-    play.src ="images/pause.svg"
+    play.src ="public/images/pause.svg"
     document.querySelector(".songInfo").innerHTML=track
     document.querySelector(".songtime").innerHTML="00:00 / 00:00"
 }
@@ -65,7 +65,7 @@ async function main(){
                                 <div>${song.replaceAll("%20"," ")}</div>
                             </div>
                             </div>
-                            <img src="images/play.svg" alt="">
+                            <img src="public/images/play.svg" alt="">
                           </li>`;
     }
 
@@ -89,11 +89,11 @@ async function main(){
     play.addEventListener("click",()=>{
         if(currentsong.paused){
             currentsong.play()
-            play.src ="images/pause.svg"
+            play.src ="public/images/pause.svg"
         }
         else{
             currentsong.pause()
-            play.src="images/playpause.svg"
+            play.src="public/images/playpause.svg"
         }
     })
     //select song
